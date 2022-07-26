@@ -28,6 +28,7 @@
 
 a {
     display: inline-block;
+    text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -132,6 +133,8 @@ img {
     color: var(--secondary-text-color);
     fill: var(--secondary-text-color);
     letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
 }
 .connection-link:hover, .connection-link:focus {
     color:var(--style-design-color);
@@ -184,6 +187,8 @@ img {
 .banner {
     padding: 200px 0;
     text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
     background-color: var(--bg-banner);
     background-image: 
         linear-gradient(to bottom, rgba(47, 48, 58, 0.4) 100%, transparent),
@@ -234,7 +239,11 @@ img {
     border: 1px solid transparent;
     border-radius: 4px;
     background-color: var(--secondary-bg-color);
-    padding: 25px 100px;
+    width: 270px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 30px;
     margin-bottom: 30px;
 }
@@ -321,8 +330,7 @@ img {
 .social-list {
     display: flex;
     justify-content: center;
-    padding-top: 16px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 .social-item {
     width: 44px;
@@ -341,6 +349,11 @@ img {
     border-radius: 50%;
 }
 .social-link:hover, .social-link:focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--additional-text-color);
+    border: 1px solid var(--style-design-color);
     background-color: var(--style-design-color);
     border-radius: 50%;
     box-shadow: 
@@ -376,8 +389,14 @@ img {
     border-radius: 4px;
 }
 .client-link:focus, .client-link:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     fill: var(--style-design-color);
     border: 1px solid var(--style-design-color);
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
 }
 
 /* Сторінка Портфоліо */
@@ -434,6 +453,12 @@ img {
     margin-right: -30px;
     margin-bottom: -30px;
 }
+.portfolio-link:hover, .portfolio-link:focus {
+    display: block;
+    box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .img-portfolio {
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 30px;
@@ -441,13 +466,6 @@ img {
     width: 370px;
     background-color: var(--main-bg-color);
 }
-.img-portfolio:hover {
-    box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06), 
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
-}
-
 .div-container {
     padding: 20px 24px 20px 24px;
     border-left: 1px solid var(--portfolio-border-color);
@@ -464,6 +482,7 @@ img {
 }
 .box-footer {
     display: flex;
+    align-items: baseline;
 }
 .address-box-footer {
     width: 231px;
@@ -522,7 +541,6 @@ img {
 }
 .social-title-footer {
     font-size: 14px;
-    margin-top: 12px;
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
