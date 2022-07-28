@@ -19,9 +19,12 @@
                     </span>
                     </a>
                     <ul class="nav-list list">
-                        <li class="nav-list-menu"><a href="./index.html" class="nav-link link current">Студия</a></li>
-                        <li class="nav-list-menu"><a href="./portfolio.html" class="nav-link link">Портфолио</a></li>
-                        <li class="nav-list-menu"><a href="#" class="nav-link link">Контакты</a></li>
+                        <li class="nav-list-menu">
+                            <a href="./index.html" class="nav-link link current">Студия</a></li>
+                        <li class="nav-list-menu">
+                            <a href="./portfolio.html" class="nav-link link">Портфолио</a></li>
+                        <li class="nav-list-menu">
+                            <a href="#" class="nav-link link">Контакты</a></li>
                     </ul>
                 </nav>
                 <ul class="connection list">
@@ -47,7 +50,7 @@
                     <h1 class="banner-title">
                         Эффективные решения для вашего бизнеса
                     </h1>
-                    <button type="button" class="banner-button">Заказать услугу</button>
+                    <button type="button" class="banner-button" data-modal-open>Заказать услугу</button>
                 </div>
             </section>
         <section class="section">
@@ -104,9 +107,18 @@
                     Чем мы занимаемся
                 </h2>
                 <ul class="list list-engage">
-                    <li class="list-img"><img src="./images/computer.jpg" width="370" height="295" alt="Работа за компьютером"></li>
-                    <li class="list-img"><img src="./images/smartphone.jpg" width="370" height="295" alt="Работа в смартфоне"></li>
-                    <li class="list-img"><img src="./images/tablet.jpg" width="370" height="295" alt="Работа на планшете"></li>
+                    <li class="item-img">
+                        <img src="./images/computer.jpg" width="370" height="295" alt="Работа за компьютером">
+                        <p class="item-img-text">Десктопные приложения</p>
+                    </li>
+                    <li class="item-img">
+                        <img src="./images/smartphone.jpg" width="370" height="295" alt="Работа в смартфоне">
+                        <p class="item-img-text">Мобильные приложения</p>
+                    </li>
+                    <li class="item-img">
+                        <img src="./images/tablet.jpg" width="370" height="295" alt="Работа на планшете">
+                        <p class="item-img-text">Дизайнерские решения</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -382,5 +394,14 @@
                </div>
            </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button type="button" class="modal-button" data-modal-close>
+            <svg class="icon-close" width="18" height="18">
+              <use href="./js/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+      </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
